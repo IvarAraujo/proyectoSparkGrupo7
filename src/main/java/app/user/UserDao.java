@@ -11,7 +11,7 @@ import org.eclipse.jetty.server.Authentication.User;
 
 public class UserDao {
 
-    private final List<user> users = ImmutableList.of(
+    private final static List<user> users = ImmutableList.of(
             //        Username    Salt for hash                    Hashed password (the password is "password" for all users)
             new user("01","perwendel", "$2a$10$h.dl5J86rGH7I8bD9bZeZe", "333452","021999888"),
             new user("02","davidase","$2a$10$e0MYzXyjpJS7Pd0RVvHwHe", "333452","021999888"),

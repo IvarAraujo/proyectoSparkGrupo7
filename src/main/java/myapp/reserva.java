@@ -1,16 +1,24 @@
 package myapp;
 
 public class reserva {
-	String id_reserva, localidad, fecha_reserva, dias_reserva, costo_reserva;
-
-	public reserva(String id_reserva, String localidad, String fecha_reserva, String dias_reserva,
-			String costo_reserva) {
+	
+		String id_reserva, localidad, fecha_reserva,costo_reserva;
+		int dias_reserva;
+		String detalles_reserva, medio_reserva;
+		boolean reserva_vip;
+	
+	
+	public reserva(String id_reserva, String localidad, String fecha_reserva, String costo_reserva, int dias_reserva,
+			String detalles_reserva, String medio_reserva, boolean reserva_vip) {
 		super();
 		this.id_reserva = id_reserva;
 		this.localidad = localidad;
 		this.fecha_reserva = fecha_reserva;
-		this.dias_reserva = dias_reserva;
 		this.costo_reserva = costo_reserva;
+		this.dias_reserva = dias_reserva;
+		this.detalles_reserva = detalles_reserva;
+		this.medio_reserva = medio_reserva;
+		this.reserva_vip = reserva_vip;
 	}
 
 	public reserva() {
@@ -42,11 +50,11 @@ public class reserva {
 		this.fecha_reserva = fecha_reserva;
 	}
 
-	public String getDias_reserva() {
+	public int getDias_reserva() {
 		return dias_reserva;
 	}
 
-	public void setDias_reserva(String dias_reserva) {
+	public void setDias_reserva(int dias_reserva) {
 		this.dias_reserva = dias_reserva;
 	}
 
@@ -58,10 +66,37 @@ public class reserva {
 		this.costo_reserva = costo_reserva;
 	}
 
+	public String getDetalles_reserva() {
+		return detalles_reserva;
+	}
+
+	public void setDetalles_reserva(String detalles_reserva) {
+		this.detalles_reserva = detalles_reserva;
+	}
+
+	public String getMedio_reserva() {
+		return medio_reserva;
+	}
+
+	public void setMedio_reserva(String medio_reserva) {
+		this.medio_reserva = medio_reserva;
+	}
+
+	public boolean getReserva_vip() {
+		return reserva_vip;
+	}
+
+	public void setReserva_vip(boolean reserva_vip) {
+		this.reserva_vip = reserva_vip;
+	}
+
+
+
 	@Override
 	public String toString() {
 		return "reserva [id_reserva=" + id_reserva + ", localidad=" + localidad + ", fecha_reserva=" + fecha_reserva
-				+ ", dias_reserva=" + dias_reserva + ", costo_reserva=" + costo_reserva + "]";
+				+ ", costo_reserva=" + costo_reserva + ", dias_reserva=" + dias_reserva + ", detalles_reserva="
+				+ detalles_reserva + ", medio_reserva=" + medio_reserva + ", reserva_vip=" + reserva_vip + "]";
 	}
 
 	@Override

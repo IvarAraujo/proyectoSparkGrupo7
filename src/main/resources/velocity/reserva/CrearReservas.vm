@@ -1,0 +1,22 @@
+#parse("/velocity/layout.vm")
+#@mainLayout()
+    #if($reserva)
+    <h1>$reserva.getId_reserva()</h1>
+    <div class="Reserva">
+        <div class="CrearReserva">
+            <h1>$reserva.setId_reserva()</h1>
+            <h1>$"reserva.setLocalidad()</h1>
+            <h1>$"reserva.setFecha_reserva()</h1>
+            <h1>$"reserva.setCosto_reserva()</h1>
+            <h1>$"reserva.setDias_reserva()</h1>
+            <h1>$"reserva.setDetalles_reserva()</h1>
+            <h1>$"reserva.setDias_reserva()</h1>
+            <h1>$"reserva.setMedio_reserva()</h1>
+            <h1>$"reserva.setReserva_vip()</h1>
+            <h1>$msg.get("Reserva_Registrada")</h1>
+        </div>
+    </div>
+    #else
+    <h1>$msg.get("Datos_No_Validos o ya existe reserva")</h1>
+    #end
+#end
